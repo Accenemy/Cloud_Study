@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
-import org.springframework.cloud.netflix.eureka.EurekaDiscoveryClient;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -50,7 +49,7 @@ public class PaymentController {
         }
         return new CommonResult(500,"没有对应记录，查询ID:"+id,null);
     }
-    
+
     @GetMapping(value = "/payment/discovery")
     public Object discovery(){
         List<String> services = discoveryClient.getServices();
@@ -65,5 +64,6 @@ public class PaymentController {
         }
         return this.discoveryClient;
     }
+
 
 }
