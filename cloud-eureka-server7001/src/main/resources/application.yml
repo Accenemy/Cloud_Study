@@ -9,8 +9,8 @@ eureka:
     service-url:
       defaultZone: http://eureka7002.com:7002/eureka/
 
-  server:
+ # server:
     #自我保护机制就是 存在某种情况 某个服务是正常的但是可能是网络拥堵或者异常接收不到这个服务，呢么Eureka不会直接删除这个服务，而是保留下来
     # 关闭自我保护机制
-    enable-self-preservation: false
-    eviction-interval-timer-in-ms: 2000
+  #  enable-self-preservation: false
+  #  eviction-interval-timer-in-ms: 2000
